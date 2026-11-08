@@ -1,0 +1,21 @@
+{
+  "name": "web-scraper-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon --watch src --watch public --exec \"node src/server.js\"",
+    "start": "node src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.19.2",
+    "puppeteer": "^22.15.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}

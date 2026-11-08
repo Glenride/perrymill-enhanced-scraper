@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "context7": {
+      "serverUrl": "https://mcp.context7.com/mcp",
+      "headers": {
+        "CONTEXT7_API_KEY": "ctx7sk-4d9627be-df31-4361-a89c-4864b3689c72"
+      }
+    },
+    "python-blueprint": {
+      "serverUrl": "https://context7.com/johnthagen/python-blueprint"
+    },
+    "openai-codex": {
+      "serverUrl": "https://context7.com/websites/codex_io"
+    }
+  }
+}

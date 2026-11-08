@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Example - Article list</title>
+    <!-- Ensure the client-side script is included so openReader/initReaderBindings are available -->
+    <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>Example article list</h1>
+
+      {# Example: `items` should be a list of dicts with keys `title`, `summary`, and `link` #}
+      <ul>
+        {% for item in items %}
+        <li style="margin-bottom:18px">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.summary }}</p>
+
+          {# Primary read button that opens the in-site reader via our JS. Keep the original link too. #}
+          <a href="#" class="open-reader"
+             data-article-url="{{ item.link }}"
+             data-article-title="{{ item.title|e }}"
+             data-article-summary="{{ item.summary|e }}">
+            Read
+          </a>
+
+          {# Optional: keep a direct link to the original article (opens in new tab) #}
+          <a href="{{ item.link }}" target="_blank" rel="noopener">Original</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </main>
+
+    <script>
+      // If your page renders items dynamically after load, call this to bind new elements.
+      if (window.initReaderBindings) window.initReaderBindings(document);
+    </script>
+  </body>
+</html>

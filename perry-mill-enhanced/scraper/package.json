@@ -1,0 +1,20 @@
+{
+  "name": "perry-mill-scraper",
+  "version": "0.1.0",
+  "description": "Puppeteer scraper for Perry Mill Enhanced",
+  "main": "fetch-article.js",
+  "bin": {
+    "fetch-article": "fetch-article.js"
+  },
+  "scripts": {
+    "fetch-article": "node fetch-article.js"
+  },
+  "dependencies": {
+    "puppeteer": "^21.0.1"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "author": "",
+  "license": "MIT"
+}
